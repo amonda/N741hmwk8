@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
   10. Mitoses                       1 - 10
   11. Class:                        (2 for benign, 4 for malignant)
 ```
-##Import Data
+#Import Data
 ```{r}
 
 #The raw data files can be downloaded from the associated Data Folder at [http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/](http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/). 
@@ -84,20 +84,7 @@ bcdat <- bcdat %>%
 bcdat <- na.omit(bcdat)
 ```
 
-## Principal Components Analysis
-
-For this Homework, please refer back to the code and exercises that Dr. Hertzberg presented during lesson 10 - specifically review towards the end of "Lesson10Part3.Rmd" see [https://github.com/vhertzb/Lesson10/blob/master/Lesson10Part3.Rmd](https://github.com/vhertzb/Lesson10/blob/master/Lesson10Part3.Rmd). During this exercise, Dr. Hertzberg introduced you to the `prcomp` procedure for performing principal components analysis. `prcomp` is part of the built-in `stats` package with base R. To learn morn type `help(prcomp)`.
-
-In Dr. Hertzberg's example, she provided code for:
-
-* performing the principal components analysis (pca)
-* using the pca output to make a plot of the variances for each principal component (pc)
-* computing the PVE (percent variance explained) and plotting the PVE
-* and plotting the principal component "scores" of the cases (e.g. the "scores" plot)
-
-I will layout the code below for running the PCA for the dataset as a whole, which will include also making a "loadings" plot for the variable "coefficients" or "loading weights" for each PC - these "loading plots" give us additional insight into (a) how the variables cluster or relate/correlate with each other or not and (b) where they fall in terms of relevance for each PC in the plot. For this dataset, we can easily get away with keeping only 2 PCs and making simplier 2D scatterplots for both the "loading plot" and "scores plot".
-
-Use the code steps below to help you complete this homework 8 assignment.
+# Principal Components Analysis
 
 ## 1. Perform the PCA
 
